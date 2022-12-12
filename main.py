@@ -21,7 +21,7 @@ def index():
 def get_currency():
     results = []
     for currency in db:
-        r = requests.get(f'https://v6.exchangerate-api.com/v6/YOUR-API-KEY/latest/{currency["currencyName"]}')
+        r = requests.get(f'https://v6.exchangerate-api.com/v6/786cc711780443f0973ae997/latest/{currency["currencyName"]}')
         current_currency = r.json()['currency']
         print(r.json())
         results.append({'name': currency['name'], 'value': currency['value ']})
